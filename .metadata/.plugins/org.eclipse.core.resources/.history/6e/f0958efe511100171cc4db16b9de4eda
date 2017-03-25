@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Iieni(working title)">
+        <property name="context-root" value="Iieni_working_title"/>
+        <property name="java-output-path" value="/Iieni(working title)/build/classes"/>
+    </wb-module>
+</project-modules>
