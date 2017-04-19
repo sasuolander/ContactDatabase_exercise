@@ -1,0 +1,7 @@
+127.0.0.1 - - [12/Apr/2017:19:20:35 +0200] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [12/Apr/2017:19:20:37 +0200] "GET /Iieni_working_title/test HTTP/1.1" 404 1064
+0:0:0:0:0:0:0:1 - - [12/Apr/2017:19:21:00 +0200] "GET /Iieni_working_title/test HTTP/1.1" 200 627
+0:0:0:0:0:0:0:1 - - [12/Apr/2017:19:21:01 +0200] "GET /Iieni_working_title/css/main.css HTTP/1.1" 404 1058
+0:0:0:0:0:0:0:1 - - [12/Apr/2017:19:21:01 +0200] "GET /Iieni_working_title/css/normalize.css HTTP/1.1" 404 1068
+0:0:0:0:0:0:0:1 - - [12/Apr/2017:19:21:01 +0200] "GET /Iieni_working_title/js/plugins.js HTTP/1.1" 404 1060
+0:0:0:0:0:0:0:1 - - [12/Apr/2017:19:21:01 +0200] "GET /Iieni_working_title/js/main.js HTTP/1.1" 404 1054
