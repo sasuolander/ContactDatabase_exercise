@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DataAccessModel {
 	protected static Connection getConnection() {
 		Connection connection = null;
-		// Alkum‰‰ritykset
+		// Setting for my test server
 		String dbUsername = "root";
 		String dbPassword = "root";
 		String url = "jdbc:mysql://localhost:3306/contact/root";

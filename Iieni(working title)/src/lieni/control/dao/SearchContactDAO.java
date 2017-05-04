@@ -23,7 +23,7 @@ public class SearchContactDAO {
 		
 	}
 	
-	private static Contact SearchOne(String Id) {
+	/*private static Contact SearchOne(String Id) {
 		return null;
 		
 	}
@@ -63,6 +63,6 @@ public class SearchContactDAO {
 	private static Contact SearchOne(String Country) {
 		return null;
 		
-	}
+	}*/
 	
 }

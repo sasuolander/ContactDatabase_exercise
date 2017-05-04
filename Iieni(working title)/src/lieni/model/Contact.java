@@ -6,9 +6,26 @@ public class Contact {
 	private String FirstName;
 	private String LastName;
 	private String Title;
+	private String Organization;
+	private String Address;
 	private String ZIPCode;
 	private String City;
 	private String Country;
+	
+	public String getOrganization() {
+		return Organization;
+	}
+	public void setOrganization(String organization) {
+		Organization = organization;
+	}
+	
+	
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
 	public int getID() {
 		return ID;
 	}
@@ -51,32 +68,32 @@ public class Contact {
 	public void setCountry(String country) {
 		Country = country;
 	}
-	@Override
-	public String toString() {
-		return "Contact ID=" + ID + ", FirstName=" + FirstName + ", LastName="
-				+ LastName + ", Title=" + Title + ", ZIPCode=" + ZIPCode
-				+ ", City=" + City + ", Country=" + Country;
-	}
-	public Contact(int iD, String firstName, String lastName, String title,
+	
+	
+	public Contact(int iD, String firstName, String lastName, String title, String organization, String address,
 			String zIPCode, String city, String country) {
 		super();
-		ID = iD;
-		FirstName = firstName;
-		LastName = lastName;
-		Title = title;
-		ZIPCode = zIPCode;
-		City = city;
-		Country = country;
+		this.ID = iD;
+		this.FirstName = firstName;
+		this.LastName = lastName;
+		this.Title = title;
+		this.Organization =organization;
+		this.Address= address;
+		this.ZIPCode = zIPCode;
+		this.City = city;
+		this.Country = country;
 	}
 	public Contact() {
 		super();
-		ID = 0;
-		FirstName = null;
-		LastName = null;
-		Title = null;
-		ZIPCode = null;
-		City = null;
-		Country = null;
+		this.ID = 0;
+		this.FirstName = null;
+		this.LastName = null;
+		this.Title = null;
+		this.Organization= null;
+		this.Address = null;
+		this.ZIPCode = null;
+		this.City = null;
+		this.Country = null;
 	}
 	
 	
