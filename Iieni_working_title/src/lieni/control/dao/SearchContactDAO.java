@@ -16,20 +16,47 @@ public class SearchContactDAO  extends DataAccessModel{
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		ArrayList<Contact>Contats= new ArrayList<Contact>();
+		Contact contact = null;
+		ArrayList<Contact>contats= new ArrayList<Contact>();
 		
-		try {
-			conn = getConnection();
-			String slqselect = "SELECT ID, FirstName,LastName, Title, Organization, Address, ZIP_code City, Country FROM contact;";
-			stmt = conn.prepareStatement(slqselect);
-			rs = stmt.executeQuery();
+			
+			try {
+				conn = getConnection();
+				String slqselect = "SELECT ID, FirstName,LastName, Title, Organization, Address, ZIP_code, City, Country FROM contact;";
+				stmt = conn.prepareStatement(slqselect);
+				rs = stmt.executeQuery();
+				while(rs.next()){
+					contact = readContact(rs);
+					contats.add(contact);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			
-		}catch(SQLException e){
-			throw new RuntimeErrorException(e);
-		}
 		
+		return contats;
 	}
+	
+	private Contact readContact(ResultSet rs){
+		try {
+			int id = rs.getInt(1);
+			String FirstName = rs.getString("FirstName");
+			String LastName = rs.getString("LastName" );
+			String Title = rs.getString( "Title");
+			String Organization = rs.getString("Organization");
+			String Address = rs.getString("Address");
+			String ZIP_code = rs.getString("ZIP_code");
+			String City = rs.getString("City");
+			String Country = rs.getString("Country");
+			
+			return new Contact(id, FirstName, LastName, Title, Organization, Address, ZIP_code, City, Country);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	
 	//to search by using different  keyword i need to overload method
 	
