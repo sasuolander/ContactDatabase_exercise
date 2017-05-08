@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class AddContactServlet
- */
+import lieni.control.dao.ContactDAO;
+import lieni.model.Contact;
+
+
 @WebServlet("/AddContact")
 public class AddContactServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,8 +22,6 @@ public class AddContactServlet extends HttpServlet {
         super();
         
     }
-
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String jsp = "/view/NewContact.jsp ";
 		RequestDispatcher dispatcher = getServletContext()
@@ -33,6 +32,19 @@ public class AddContactServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		int id = 0;
+		String FirstName = request.getParameter("FirstName");
+		String LastName = request.getParameter("LastName");
+		String Title = request.getParameter("Title");;
+		String Organisation = request.getParameter("Organisation");
+		String Address = request.getParameter("Address");
+		String ZipCode = request.getParameter("ZipCode");
+		String City = request.getParameter("City ");
+		String Country = request.getParameter("Country");
+		
+		Contact contact = new Contact(id, FirstName, LastName, Title, Organisation, Address, ZipCode, City, Country);
+		ContactDAO.Add(contact);
+		response.sendRedirect("ListAll");
 	}
 
 }

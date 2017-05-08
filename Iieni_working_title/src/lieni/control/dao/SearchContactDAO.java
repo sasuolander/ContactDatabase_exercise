@@ -33,9 +33,6 @@ public class SearchContactDAO  extends DataAccessModel{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-		
 		return contats;
 	}
 	
@@ -64,8 +61,6 @@ public class SearchContactDAO  extends DataAccessModel{
 							String LastName, String Title, 
 							String Organisation, String Address,
 							String ZipCode, String City, String Country) {
-		
-		
 		return null;
 		
 	}

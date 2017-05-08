@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form method="POST" id="form">
+FirstName		<input type="text" name="FirstName" value="">
+LastName		<input type="text" name="LastName" value="">
+Title			<input type="text" name="Title" value="">
+Organisation	<input type="text" name="Organisation" value="">
+Address			<input type="text" name="Address" value="">
+ZipCode			<input type="text" name="ZipCode" value="">
+City 			<input type="text" name="City " value="">
+Country			<input type="text" name="Country" value="">
+</form>
 </body>
 </html>

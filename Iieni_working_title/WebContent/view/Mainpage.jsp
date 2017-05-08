@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@page import=lieni.model.Contact %>
+    <%@page import="lieni.model.Contact" %>
     <jsp:useBean id="contactList" scope="request" type="java.util.ArrayList"></jsp:useBean>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -9,9 +9,9 @@
 <title>Main page</title>
 </head>
 <body>
-
+<h1>List of Contact</h1>
+<a id="link" href="AddContact">Add contact</a>
 	<table>
-
 		<thead>
 			<tr>
 				<th>FirstName</th>
@@ -22,7 +22,7 @@
 				<th>ZIP code</th>
 				<th>City</th>
 				<th>Country</th>
-				<th></th>
+				<th>Remove</th>
 			</tr>
 		</thead>
 		<%
@@ -39,12 +39,11 @@
 			<td> <%=contact.getZIPCode() %> </td>
 			<td> <%=contact.getCity() %> </td>
 			<td> <%=contact.getCountry() %> </td>
-            <td><a id="link" name="remove" href="---?contactid=<%=contact.getID()%>" >Remove</a></td>
+            <td><a id="link" name="remove" href="RemoveContact?contactid=<%=contact.getID()%>" >Remove</a></td>
 		</tr>
 	<%
                }
           %>
 	</table>
-
 </body>
 </html>
