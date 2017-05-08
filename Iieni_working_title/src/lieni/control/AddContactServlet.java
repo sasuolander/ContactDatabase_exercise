@@ -23,7 +23,7 @@ public class AddContactServlet extends HttpServlet {
         
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String jsp = "/view/NewContact.jsp ";
+		String jsp = "/view/NewContact.jsp";
 		RequestDispatcher dispatcher = getServletContext()
 				.getRequestDispatcher(jsp);
 		dispatcher.forward(request, response);

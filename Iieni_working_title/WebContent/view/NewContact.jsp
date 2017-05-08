@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>New contact form</title>
 </head>
 <body>
 <form method="POST" id="form">
@@ -16,6 +16,7 @@ Address			<input type="text" name="Address" value="">
 ZipCode			<input type="text" name="ZipCode" value="">
 City 			<input type="text" name="City " value="">
 Country			<input type="text" name="Country" value="">
+<input type= "submit">
 </form>
 </body>
 </html>

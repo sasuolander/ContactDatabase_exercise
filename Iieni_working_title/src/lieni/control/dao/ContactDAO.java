@@ -37,9 +37,7 @@ public class ContactDAO extends DataAccessModel {
 		
 			try {
 				conn = getConnection();
-				String sql = "INSERT INTO (FirstName, LastName, Title, "
-						+ "Organization, Address, ZIP_code"
-						+ ", City, Country)" + "VALUES (?,?,?,?,?,?,?,?)";
+				String sql = "INSERT INTO contact (FirstName, LastName, Title,Organization, Address, ZIP_code, City, Country)" + " VALUES (?,?,?,?,?,?,?,?);";
 				stmt = conn.prepareStatement(sql);
 				stmt.setString(1, FirstName);
 				stmt.setString(2, LastName);
