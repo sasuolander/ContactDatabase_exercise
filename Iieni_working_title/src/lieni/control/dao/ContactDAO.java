@@ -26,7 +26,7 @@ public class ContactDAO extends DataAccessModel {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		 
-		String FirstName=contact.getFirstName(); 
+		String FirstName=contact.getFirstName();
 		String LastName=contact.getLastName();
 		String Title=contact.getTitle();
 		String Organisation=contact.getOrganization(); 
@@ -34,8 +34,11 @@ public class ContactDAO extends DataAccessModel {
 		String ZipCode=contact.getZIPCode(); 
 		String City=contact.getCity(); 
 		String Country=contact.getCountry();
-		
+		System.out.println("Values of object"+FirstName);
 			try {
+				
+				//INSERT INTO contact (FirstName, LastName, Title,Organization, Address, ZIP_code, City, Country)
+				//VALUES ('jk','jk','jk','jk','jk','jk','jk','jk');
 				conn = getConnection();
 				String sql = "INSERT INTO contact (FirstName, LastName, Title,Organization, Address, ZIP_code, City, Country)" + " VALUES (?,?,?,?,?,?,?,?);";
 				stmt = conn.prepareStatement(sql);
@@ -47,7 +50,7 @@ public class ContactDAO extends DataAccessModel {
 				stmt.setString(6, ZipCode);
 				stmt.setString(7, City);
 				stmt.setString(8, Country);
-				stmt.executeQuery(sql);
+				stmt.executeQuery();
 				conn.close();
 			} catch (SQLException e) {
 				throw new RuntimeException(e);

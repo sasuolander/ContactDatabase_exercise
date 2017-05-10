@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <display-name>Iieni_working_title</display-name>
-  
   <welcome-file-list>
-    <welcome-file>/Mainpage.jsp</welcome-file>
+    <welcome-file>/Login.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>ListAll</servlet-name>
     <servlet-class>lieni.control.ListAllServlet</servlet-class>
@@ -14,8 +12,7 @@
     <servlet-name>ListAll</servlet-name>
     <url-pattern>/Mainpage.jsp</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>AddContact</servlet-name>
     <servlet-class>lieni.control.AddContactServlet</servlet-class>
   </servlet>
@@ -25,5 +22,13 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>lieni.control.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.jsp</url-pattern>
+  </servlet-mapping>
   
 </web-app>

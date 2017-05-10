@@ -43,6 +43,7 @@ public class AddContactServlet extends HttpServlet {
 		String Country = request.getParameter("Country");
 		
 		Contact contact = new Contact(id, FirstName, LastName, Title, Organisation, Address, ZipCode, City, Country);
+		//System.out.println(contact.getAddress());
 		ContactDAO.Add(contact);
 		response.sendRedirect("ListAll");
 	}
