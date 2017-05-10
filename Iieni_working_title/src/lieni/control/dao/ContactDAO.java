@@ -34,7 +34,7 @@ public class ContactDAO extends DataAccessModel {
 		String ZipCode=contact.getZIPCode(); 
 		String City=contact.getCity(); 
 		String Country=contact.getCountry();
-		System.out.println("Values of object"+FirstName);
+		//System.out.println("Values of object"+FirstName);
 			try {
 				
 				//INSERT INTO contact (FirstName, LastName, Title,Organization, Address, ZIP_code, City, Country)
