@@ -8,11 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form>
+	<form method="post" id="form">
 		<label>Username</label>
-		<input type="text" placeholder="Enter Username" name="uname" required>
+		<input type="text" placeholder="Enter Username" name="username" required>
 		<label>Password</label>
-		<input type="password" placeholder="Enter Password" name="psw" required>
+		<input type="password" placeholder="Enter Password" name="password" required>
+		<button type="submit" >Log in</button>
 	</form>
 </body>
 </html>

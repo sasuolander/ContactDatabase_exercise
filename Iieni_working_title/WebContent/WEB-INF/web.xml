@@ -20,8 +20,6 @@
     <servlet-name>AddContact</servlet-name>
     <url-pattern>/NewContact.jsp</url-pattern>
   </servlet-mapping>
-  
-  
    <servlet>
     <servlet-name>Login</servlet-name>
     <servlet-class>lieni.control.LoginServlet</servlet-class>
