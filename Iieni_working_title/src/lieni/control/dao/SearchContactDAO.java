@@ -62,7 +62,6 @@ public class SearchContactDAO  extends DataAccessModel{
 							String Organisation, String Address,
 							String ZipCode, String City, String Country) {
 		return null;
-		
 	}
 	
 	/*private static Contact SearchOne(String Id) {
