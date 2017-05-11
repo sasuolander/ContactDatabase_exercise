@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/Login")
@@ -31,11 +32,14 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String passwordIn=request.getParameter("password");
 		String passwordD= "password"; //Password from database
+		HttpSession session = request.getSession();
+		
 		
 		PrintWriter out = response.getWriter();
 		if(passwordIn.equals(passwordD)){
 		response.sendRedirect("ListAll");
 		//start session
+		session.setAttribute("password", passwordIn);
 		}else{
 			out.println("<script type=\"text/javascript\">");
 		       out.println("alert('User or password incorrect');");

@@ -25,11 +25,15 @@
 				<th>Remove</th>
 			</tr>
 		</thead>
+		
+		<!-- convert this to EL -->
 		<%
           Contact contact = null; 
 		for(int i = 0; i < contactList.size(); i++) { 
 			contact = (Contact)contactList.get(i);
      %>
+     
+     
 		<tr>
 			<td> <%=contact.getFirstName() %> </td>
 			<td> <%=contact.getLastName() %> </td>

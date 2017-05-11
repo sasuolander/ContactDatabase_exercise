@@ -17,9 +17,7 @@ public class SearchContactDAO  extends DataAccessModel{
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		Contact contact = null;
-		ArrayList<Contact>contats= new ArrayList<Contact>();
-		
-			
+		ArrayList<Contact>contats= new ArrayList<Contact>();			
 			try {
 				conn = getConnection();
 				String slqselect = "SELECT ID, FirstName,LastName, Title, Organization, Address, ZIP_code, City, Country FROM contact;";
@@ -53,8 +51,6 @@ public class SearchContactDAO  extends DataAccessModel{
 			throw new RuntimeException(e);
 		}
 	}
-	
-	
 	//to search by using different  keyword i need to overload method
 	
 	public Contact SearchOne(String ID, String FirstName, 
@@ -105,5 +101,4 @@ public class SearchContactDAO  extends DataAccessModel{
 		return null;
 		
 	}*/
-	
 }
