@@ -21,6 +21,6 @@ public class DataAccessModel {
 			throw new RuntimeException(e);
 		}
 		return connection;
-	} // end of method
+	} 
 }
 

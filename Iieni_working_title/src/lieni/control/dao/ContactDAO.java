@@ -17,7 +17,6 @@ public class ContactDAO extends DataAccessModel {
 			stmt = conn.prepareStatement(sql);
 			stmt.executeQuery();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			throw new RuntimeException(e);
 		}	
 	}
@@ -34,11 +33,9 @@ public class ContactDAO extends DataAccessModel {
 		String ZipCode=contact.getZIPCode(); 
 		String City=contact.getCity(); 
 		String Country=contact.getCountry();
-		//System.out.println("Values of object"+FirstName);
 			try {
 				
-				//INSERT INTO contact (FirstName, LastName, Title,Organization, Address, ZIP_code, City, Country)
-				//VALUES ('jk','jk','jk','jk','jk','jk','jk','jk');
+				
 				conn = getConnection();
 				String sql = "INSERT INTO contact (FirstName, LastName, Title,Organization, Address, ZIP_code, City, Country)" + " VALUES (?,?,?,?,?,?,?,?);";
 				stmt = conn.prepareStatement(sql);

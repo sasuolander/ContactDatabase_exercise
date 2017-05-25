@@ -28,12 +28,10 @@ public class SearchContactDAO  extends DataAccessModel{
 					contats.add(contact);
 				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		return contats;
 	}
-	
 	private Contact readContact(ResultSet rs){
 		try {
 			int id = rs.getInt(1);
