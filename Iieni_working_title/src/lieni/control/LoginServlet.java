@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 		String passwordD = user.getPassword();
 		String usernameD = user.getName();
 		PrintWriter out = response.getWriter();
-		HttpSession session = request.getSession();
+		
 
 		boolean right = usernameIn.equals(usernameD)
 				&& passwordIn.equals(passwordD);
@@ -55,7 +55,10 @@ public class LoginServlet extends HttpServlet {
 
 			if (right) {
 				response.sendRedirect("ListAll");
-				session.setAttribute("password", passwordIn);
+				HttpSession session = request.getSession();
+				session.setAttribute("username", usernameD);
+				// session last 30 min
+				session.setMaxInactiveInterval(30*60);
 				// response.sendRedirect("");
 			} else if (wrong_username) {
 				out.println("<script type=\"text/javascript\">");
