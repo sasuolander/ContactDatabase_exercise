@@ -34,7 +34,7 @@
 			<td> <c:out value = "${contact.Organization }" />		</td>
 			<td> <c:out value = "${contact.Address }" />			</td>
 			<td> <c:out value = "${contact.ZIPCode }" />			</td>
-			<td> <c:out value = "${ contact.City}" />			</td>
+			<td> <c:out value = "${ contact.City}"/>			</td>
 			<td> <c:out value = "${contact.Country }" />			</td>
             <td><a id="link" name="remove" href="RemoveContact?contactid=<c:out value = "${contact.ID}" />">Remove</a></td>
 		</tr>
