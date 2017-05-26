@@ -13,7 +13,7 @@
 <h1>List of Contact</h1>
 <a id="link" href="AddContact">Add contact</a>
 	<table>
-	 <c:forEach begin="1" step="1" varStatus="loopCounter" items="${contactList}" var="list">
+	 <c:forEach items="${contactList}" var="contact">
 		<thead>
 			<tr>
 				<th>FirstName</th>
@@ -28,15 +28,15 @@
 			</tr>
 		</thead>
 		<tr>
-			<td> <c:out value = "${ list.FirstName}" />		</td>
-			<td> <c:out value = "${list.LastName }" />			</td>
-			<td> <c:out value = "${ list.Title}" />			</td>
-			<td> <c:out value = "${list.Organization }" />		</td>
-			<td> <c:out value = "${list.Address }" />			</td>
-			<td> <c:out value = "${list.ZIPCode }" />			</td>
-			<td> <c:out value = "${ list.City"} />			</td>
-			<td> <c:out value = "${list.Country }" />			</td>
-            <td><a id="link" name="remove" href="RemoveContact?contactid=<c:out value = "${list.ID}" />">Remove</a></td>
+			<td> <c:out value = "${ contact.FirstName}" />		</td>
+			<td> <c:out value = "${contact.LastName }" />			</td>
+			<td> <c:out value = "${ contact.Title}" />			</td>
+			<td> <c:out value = "${contact.Organization }" />		</td>
+			<td> <c:out value = "${contact.Address }" />			</td>
+			<td> <c:out value = "${contact.ZIPCode }" />			</td>
+			<td> <c:out value = "${ contact.City}" />			</td>
+			<td> <c:out value = "${contact.Country }" />			</td>
+            <td><a id="link" name="remove" href="RemoveContact?contactid=<c:out value = "${contact.ID}" />">Remove</a></td>
 		</tr>
 	</c:forEach>
 	</table>
