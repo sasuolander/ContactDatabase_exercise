@@ -4,11 +4,19 @@
  
  
   <display-name>Iieni_working_title</display-name>
+  
+  
   <welcome-file-list>
-    <welcome-file>Login.jsp</welcome-file>
+    <welcome-file>Login</welcome-file>
   </welcome-file-list>
-  
-  
+   <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>lieni.control.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.jsp</url-pattern>
+  </servlet-mapping>
   <filter>
   	<filter-name>SecurityFilter </filter-name>
   	<filter-class>lieni.control.filter.SecurityFilter </filter-class>
@@ -34,12 +42,5 @@
     <servlet-name>AddContact</servlet-name>
     <url-pattern>/NewContact.jsp</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>Login</servlet-name>
-    <servlet-class>lieni.control.LoginServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Login</servlet-name>
-    <url-pattern>/Login.jsp</url-pattern>
-  </servlet-mapping>
+ 
 </web-app>

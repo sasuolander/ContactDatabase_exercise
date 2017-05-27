@@ -5,7 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+		<script type="text/javascript" src="bootstrap.js"></script>
+<title>Log in</title>
 </head>
 <body>
 	<form method="post" id="form">

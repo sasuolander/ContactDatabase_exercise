@@ -54,12 +54,14 @@ public class LoginServlet extends HttpServlet {
 		if (!(user.equals(null))) {
 
 			if (right) {
-				response.sendRedirect("ListAll");
 				HttpSession session = request.getSession();
 				session.setAttribute("username", usernameD);
 				// session last 30 min
 				session.setMaxInactiveInterval(30*60);
-				// response.sendRedirect("");
+				response.sendRedirect("ListAll");
+				
+				//RequestDispatcher rd=request.getRequestDispatcher("ListAll");
+				//rd.forward(request, response);
 			} else if (wrong_username) {
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('User or password incorrect');");

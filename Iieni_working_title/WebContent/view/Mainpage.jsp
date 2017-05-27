@@ -7,12 +7,14 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<link rel="stylesheet" hreft="css/main.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script type="text/javascript" src="bootstrap.js"></script>
 		<title>Main page</title>
 	</head>
 		<body>
 		<h1>List of Contact</h1>
 		<a id="link" href="AddContact">Add contact</a>
+		<a id="link" href="LogOut">Log out</a>
 			<table>
 				 <c:forEach items="${contactList}" var="contact">
 					<thead>
