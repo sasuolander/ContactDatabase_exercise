@@ -24,4 +24,5 @@ values
 ('tommi6', 'henkka', 'tietokone' ,'dummy' ,'dummyaddress' ,'10' ,'everywhere' ,'anything'),
 ('tommi2', 'henkka', 'tietokone' ,'dummy' ,'dummyaddress' ,'10' ,'everywhere' ,'anything')
 
-
+INSERT INTO userprofiles(name, password)
+values ('root','root')

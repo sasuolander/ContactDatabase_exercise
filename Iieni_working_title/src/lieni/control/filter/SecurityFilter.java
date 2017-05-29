@@ -1,6 +1,8 @@
 package lieni.control.filter;
 
 import java.io.IOException;
+import java.net.HttpRetryException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -31,10 +33,11 @@ public class SecurityFilter implements Filter {
 		HttpSession session = req.getSession(true);
 		String username = (String) session.getAttribute("username");
 		
-		if(username !=null){
+		String loginURL = req.getContextPath() + "/Login.jsp";
+		if(req.getRequestURI().equals(loginURL)||username !=null){
 			chain.doFilter(request, response);
 		}else{
-			res.sendRedirect("Login");
+			res.sendRedirect("/Login.jsp");
 		}			
 	}
 	public void destroy() {

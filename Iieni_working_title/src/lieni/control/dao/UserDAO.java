@@ -50,24 +50,32 @@ public class UserDAO extends DataAccessModel {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
-
-	public static User FindUser(String username) {
+	
+	public static User FindUser(String name) {
 
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		ResultSet rs = null;
+		
 		User user = null;
 		try {
 			conn = getConnection();
-			String sql = "SELECT ID, name, password  FROM userprofiles WHERE username =\'"
-					+ username + "\';";
-			stmt = conn.prepareStatement(sql);
-			rs = stmt.executeQuery();
+			//String sql = "SELECT ID, name, password  FROM userprofiles WHERE name =?;";
+			stmt = conn.prepareStatement("SELECT ID, name, password  FROM userprofiles WHERE name = ?");
+			stmt.setString(1, name);
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()){
+				user = new User(rs.getInt("ID"),
+						rs.getString("name"), 
+						rs.getString("password"));
+				
+			}else {
+				user = new User(-1, "-", "-");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		user = readUser(rs);
 		return user;
 	}
 }

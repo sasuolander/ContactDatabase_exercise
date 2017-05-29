@@ -16,7 +16,7 @@
 		<a id="link" href="AddContact">Add contact</a>
 		<a id="link" href="LogOut">Log out</a>
 			<table>
-				 <c:forEach items="${contactList}" var="contact">
+				 <c:forEach items="${contactList}" var="Contact">
 					<thead>
 						<tr>
 							<th>FirstName</th>
@@ -31,15 +31,15 @@
 						</tr>
 					</thead>
 						<tr>
-							<td> <c:out value = "${ contact.FirstName}" 	/>	</td>
-							<td> <c:out value = "${contact.LastName }" 		/>	</td>
-							<td> <c:out value = "${ contact.Title}" 		/>	</td>
-							<td> <c:out value = "${contact.Organization }" 	/>	</td>
-							<td> <c:out value = "${contact.Address }" 		/>	</td>
-							<td> <c:out value = "${contact.ZIPCode }" 		/>	</td>
-							<td> <c:out value = "${ contact.City}"			/>	</td>
-							<td> <c:out value = "${contact.Country }" 		/>	</td>
-				            <td><a id="link" name="remove" href="RemoveContact?contactid=<c:out value = "${contact.ID}" />">Remove</a></td>
+							<td> <c:out value = "${Contact.FirstName}" 		/>	</td>
+							<td> <c:out value = "${Contact.LastName}" 		/>	</td>
+							<td> <c:out value = "${Contact.Title}" 			/>	</td>
+							<td> <c:out value = "${Contact.Organization}" 	/>	</td>
+							<td> <c:out value = "${Contact.Address}" 		/>	</td>
+							<td> <c:out value = "${Contact.ZIPCode}" 		/>	</td>
+							<td> <c:out value = "${Contact.City}"			/>	</td>
+							<td> <c:out value = "${Contact.Country}" 		/>	</td>
+				            <td><a id="link" name="remove" href="RemoveContact?contactid=<c:out value = "${Contact.ID}" />">Remove</a></td>
 						</tr>
 				</c:forEach>
 			</table>

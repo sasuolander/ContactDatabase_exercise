@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="css/bootstrap.css">
-		<script type="text/javascript" src="bootstrap.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css"> 
+ 		<script type="text/javascript" src="bootstrap.js"></script> 
 <title>Log in</title>
 </head>
 <body>
-	<form method="post" id="form">
+	<form action="Login" method="post" id="form">
 		<label>Username</label>
 		<input type="text" placeholder="Enter Username" name="username" required>
 		<label>Password</label>

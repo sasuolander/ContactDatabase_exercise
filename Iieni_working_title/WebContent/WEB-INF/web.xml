@@ -17,15 +17,6 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/Login.jsp</url-pattern>
   </servlet-mapping>
-  <filter>
-  	<filter-name>SecurityFilter </filter-name>
-  	<filter-class>lieni.control.filter.SecurityFilter </filter-class>
-  </filter>
-  
-  <filter-mapping>
-	  <filter-name>SecurityFilter</filter-name>
-	  <url-pattern>/*</url-pattern>
-  </filter-mapping>
   <servlet>
     <servlet-name>ListAll</servlet-name>
     <servlet-class>lieni.control.ListAllServlet</servlet-class>
@@ -42,5 +33,13 @@
     <servlet-name>AddContact</servlet-name>
     <url-pattern>/NewContact.jsp</url-pattern>
   </servlet-mapping>
- 
+<!--   <filter> -->
+<!--   	<filter-name>SecurityFilter </filter-name> -->
+<!--   	<filter-class>lieni.control.filter.SecurityFilter </filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!-- 	  <filter-name>SecurityFilter</filter-name> -->
+<!-- 	  <url-pattern>/*</url-pattern> -->
+<!-- 	  <dispatcher>REQUEST</dispatcher> -->
+<!--   </filter-mapping> -->
 </web-app>

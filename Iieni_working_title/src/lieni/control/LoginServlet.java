@@ -37,50 +37,41 @@ public class LoginServlet extends HttpServlet {
 		String passwordIn = request.getParameter("password");
 		User user = null;
 		user = UserDAO.FindUser(usernameIn);
+		System.out.println(user.getId());
 		String passwordD = user.getPassword();
+		System.out.println(passwordD);
 		String usernameD = user.getName();
-		PrintWriter out = response.getWriter();
 		
-
-		boolean right = usernameIn.equals(usernameD)
-				&& passwordIn.equals(passwordD);
-		boolean wrong_username = !(usernameIn.equals(usernameD))
-				&& passwordIn.equals(passwordD);
-		boolean wrong_password = usernameIn.equals(usernameD)
-				&& !(passwordIn.equals(passwordD));
-		boolean both_wrong = !(usernameIn.equals(usernameD))
-				&& !(passwordIn.equals(passwordD));
+		
+		
+		
+		
+		
+		PrintWriter out = response.getWriter();
 
 		if (!(user.equals(null))) {
-
+			boolean right = usernameIn.equals(usernameD)
+					&& passwordIn.equals(passwordD);
+			boolean wrong_password = usernameIn.equals(usernameD);
 			if (right) {
 				HttpSession session = request.getSession();
 				session.setAttribute("username", usernameD);
 				// session last 30 min
 				session.setMaxInactiveInterval(30*60);
-				response.sendRedirect("ListAll");
+				//response.sendRedirect("ListAll");
 				
-				//RequestDispatcher rd=request.getRequestDispatcher("ListAll");
-				//rd.forward(request, response);
-			} else if (wrong_username) {
-				out.println("<script type=\"text/javascript\">");
-				out.println("alert('User or password incorrect');");
-				out.println("location='Login.jsp';");
-				out.println("</script>");
+				RequestDispatcher rd=request.getRequestDispatcher("ListAll");
+				rd.forward(request, response);
+			
 			} else if (wrong_password) {
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('User or password incorrect');");
-				out.println("location='Login.jsp';");
-				out.println("</script>");
-			} else if (both_wrong) {
-				out.println("<script type=\"text/javascript\">");
-				out.println("alert('User or password incorrect');");
+				out.println("alert('User name or password incorrect');");
 				out.println("location='Login.jsp';");
 				out.println("</script>");
 			}
 		} else {
 			out.println("<script type=\"text/javascript\">");
-			out.println("alert('User or password incorrect');");
+			out.println("alert('User name or password incorrect');");
 			out.println("location='Login.jsp';");
 			out.println("</script>");
 		}
